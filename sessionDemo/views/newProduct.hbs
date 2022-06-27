@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD</title>
+    <link rel="stylesheet" href="/css/styleInsert.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+    background-color: #c8e5e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    width: 95vw;
+}
+
+.icon {
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+form {
+    width: 25%;
+    padding: 5px 20px;
+}
+
+.flex {
+    margin: auto;
+    background-color: #8395a7;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn {
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background-color: #576574;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#btn:hover{
+    color: #10ac84;
+    background-color: #0abde3;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+    </style>
+</head>
+
+<body>
+        <form action="/checkInsertProduct" method="post">
+         <div>
+            <h1><div class="icon"><a href="/"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>Add Toy</h1>
+        </div>
+        <div class="flex">
+            <p><span>Product name</span> <input type="text" name="name" ></p>
+            <p><span>Price</span> <input type="text" name="price"></p>
+            <p><span>Quantity</span> <input type="text" name="quantity"></p>
+            <p><span>Image</span> <input type="text" name="image"></p>
+            <p><input type="submit" value="Add"></p>
+        </div>
+        </form>
+</body>
+
+</html>
+
+
+
+
+
+ {{!-- Product Name: <input type="text" name="name">
+        <br>
+        Price: <input type="text" name ="price">
+        <br>
+        Quantity: <input type="text" name="quantity">
+        <br>
+        Image: <input type="text" name ="image">
+        <br>
+        <input type="submit" value="Add"> --}}

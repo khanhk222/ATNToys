@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="/css/styleLibrary.css">
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #c8d6e5;
+}
+
+.styleTable {
+    border: none;
+    width: 100%;
+}
+
+.styleTable th {
+    background-color: #8395a7;
+    padding: 5px;
+}
+
+.styleTable td {
+    background-color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #10ac84;
+}
+
+.icon {
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+}
+
+.btn:hover a {
+    color: white;
+}
+
+a:visited {
+    color: #10ac84;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+    </style>
+</head>
+
+<body>
+    <a href="/Insert"> Add Product </a>
+    <form action="/checkSearch" method="post">
+        <input type="text" name="key">
+        <input type="submit" value="SEARCH">
+    </form>
+    <h1>Toy list</h1>
+    <table class="styleTable">
+        <tr>
+            <th>Toy Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Image</th>
+        </tr>
+        {{#each result}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{quantity}}</td>
+            <td><img src="{{image}}"></td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>
